@@ -6,9 +6,9 @@ General Description: This repository contains code for solving a maze of any dim
 
 1) maze_generator: This is an executable (originally written in C) that generates a file containing a maze of dimensions specified by user. To run this, use the following format in the commandline - 
 
-maze_generator [positive integer value (a)] [positive integer value (b)] [integers 1 to 8 or character]
+  maze_generator [positive integer value (a)] [positive integer value (b)] [integers 1 to 8 or character]
 
-This will generate a maze of dimensions (2a+1) x (2b+1) with the walls made of characters depending on the last argument.
+  This will generate a maze of dimensions (2a+1) x (2b+1) with the walls made of characters depending on the last argument.
 
 2) File operation codes: This code helps perform basic maze file manupilations using C file handling operations. This segment refers to files: file_operations.h, file_operations.c and use_file_operations.c.
 
