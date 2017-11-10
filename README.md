@@ -11,14 +11,14 @@ General Description: This repository contains code for solving a maze of any dim
        eg.
        maze_generator 7 7 X > maze_sample_15x15.txt
 
-2) File Operation Codes: This code performs basic maze file manupilations using C file handling operations. This segment refers to files: file_operations.h, file_operations.c and use_file_operations.c. After compiling the two .c files to a single executable, two arguments must be passed to run the executable. The format is as follows:
+2) File Operation Code: This code performs basic maze file manupilations using C file handling operations. This segment refers to files: file_operations.h, file_operations.c and use_file_operations.c. After compiling the two .c files to a single executable, two arguments must be passed to run the executable. The format is as follows:
 
        <executable filename> [maze filename] [destination filename for single line output]
        
        eg.
        ./file_operations maze_sample_15x15.txt maze_sample_directions.txt
 
-3) Maze Manipulation Codes: This code reads maze from a file containing a maze and stores it in a struct. It performs various operations such as generating a valid widened maze and valid taller maze using the maze read from the file. It is also capible of writing the a maze to a file. After compiling the two .c files to a single executable, the executable can be run without any additional arguments.
+3) Maze Manipulation Code: This code reads maze from a file containing a maze and stores it in a struct. It performs various operations such as generating a valid widened maze and valid taller maze using the maze read from the file. It is also capible of writing the a maze to a file. After compiling the two .c files to a single executable, the executable can be run without any additional arguments.
 
 4) Maze Solver Code: This code is capible of solving any given maze generated using maze_generator and generating a file which contains a maze with the shortest path marked. This segment refers to files: maze_manipulation.h, maze_manipulation.c and use_maze_manipulation.c. After compiling the two .c files to a single executable, multiple arguments must be passed to run the executable. The format is as follows:
 
