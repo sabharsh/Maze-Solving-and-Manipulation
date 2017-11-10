@@ -6,8 +6,24 @@ General Description: This repository contains code for solving a maze of any dim
 
 1) maze_generator: This is an executable (originally written in C) that generates a file containing a maze of dimensions specified by user. To run this, use the format given below in the commandline. This will generate a maze of dimensions (2a+1) x (2b+1) with the walls made of characters depending on the last argument.
 
-       maze_generator [positive int value (a)] [positive int value (b)] [ints 1 to 8 or single char] > [destination filename]
+       maze_generator [+ve int value (a)] [+ve int value (b)] [ints 1-8 or single char] > [destination filename]
+       
+       eg.
+       maze_generator 7 7 X > maze_sample_15x15.txt
 
-2) File operation codes: This code helps perform basic maze file manupilations using C file handling operations. This segment refers to files: file_operations.h, file_operations.c and use_file_operations.c.
+2) File Operation Codes: This code performs basic maze file manupilations using C file handling operations. This segment refers to files: file_operations.h, file_operations.c and use_file_operations.c. After compiling the two .c files to a single executable, two arguments must be passed to run the executable. The format is as follows:
 
-3) 
+       <executable filename> [maze filename] [destination filename for single line output]
+       
+       eg.
+       ./file_operations maze_sample_15x15.txt maze_sample_directions.txt
+
+3) Maze Manipulation Codes: This code reads maze from a file containing a maze and stores it in a struct. It performs various operations such as generating a valid widened maze and valid taller maze using the maze read from the file. It is also capible of writing the a maze to a file. After compiling the two .c files to a single executable, the executable can be run without any additional arguments.
+
+4) Maze Solver Code: This code is capible of solving any given maze generated using maze_generator and generating a file which contains a maze with the shortest path marked. After compiling the two .c files to a single executable, multiple arguments must be passed to run the executable. The format is as follows:
+
+      //Solving the maze - 
+      <executable filename> -m [maze filename] [destination filename for path directions] [pos] 5 12 11
+      
+      eg.
+      ./
