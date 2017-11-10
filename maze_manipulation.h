@@ -15,19 +15,14 @@ typedef struct _Maze {
 
 Maze* malloc_maze(int num_rows, int num_cols);
 
-void free_maze(Maze* maze)
-			__attribute__((nonnull));
+void free_maze(Maze* maze);
 
-Maze* read_maze(FILE* fp)
-			__attribute__((nonnull));
+Maze* read_maze(FILE* fp);
 
-bool write_maze(const char* filename, const Maze* maze)
-			__attribute__((nonnull));
+bool write_maze(const char* filename, const Maze* maze);
 
-Maze* make_taller(const Maze* orig)
-			__attribute__((nonnull));
+Maze* make_taller(const Maze* orig);
 
-Maze* make_wider(const Maze* orig)
-			__attribute__((nonnull));
+Maze* make_wider(const Maze* orig);
 
 #endif
