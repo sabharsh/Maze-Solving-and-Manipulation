@@ -20,10 +20,16 @@ General Description: This repository contains code for solving a maze of any dim
 
 3) Maze Manipulation Codes: This code reads maze from a file containing a maze and stores it in a struct. It performs various operations such as generating a valid widened maze and valid taller maze using the maze read from the file. It is also capible of writing the a maze to a file. After compiling the two .c files to a single executable, the executable can be run without any additional arguments.
 
-4) Maze Solver Code: This code is capible of solving any given maze generated using maze_generator and generating a file which contains a maze with the shortest path marked. After compiling the two .c files to a single executable, multiple arguments must be passed to run the executable. The format is as follows:
+4) Maze Solver Code: This code is capible of solving any given maze generated using maze_generator and generating a file which contains a maze with the shortest path marked. This segment refers to files: maze_manipulation.h, maze_manipulation.c and use_maze_manipulation.c. After compiling the two .c files to a single executable, multiple arguments must be passed to run the executable. The format is as follows:
 
-      //Solving the maze - 
-      <executable filename> -m [maze filename] [destination filename for path directions] [pos] 5 12 11
+      //Solving the maze
+      <executable filename> -m [maze filename] [destination filename for path directions] [start row] [start col] [end row] [end col]
       
       eg.
-      ./
+      ./maze_manipluation -m maze_sample_15x15.txt directions.txt 0 7 14 7
+      
+      //Marking the solution in a new file
+      <executable filename> -m [maze filename] [path directions filename] [destination filename with solution marked maze] [start row] [start col] [end row] [end col]
+      
+      eg.
+      ./maze_manipluation -s maze_sample_15x15.txt directions.txt sample_maze_solution.txt 0 7 14 7
